@@ -5,24 +5,21 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
 
     <script>
-        function init() {
+
+        document.addEventListener("DOMContentLoaded", function () {
             var btn = document.getElementById("btn");
-            btn.addEventListener("click", validate);
-        }
+            btn.addEventListener("click", function (evt) {
+                var nom = document.getElementById("nom");
+                if (nom.value.length < 2) {
+                    alert("nom est trop court!");
+                    evt.preventDefault();
+                    return false;
+                }
+            });
+        })
 
-        window.addEventListener("DOMContentLoaded",init)
-        
-        function validate(evt)
-        {
-            var nom = document.getElementById("nom");
-            if (nom.value.length < 2) {
-                alert("nom est trop court!");
-                evt.preventDefault();
-                return false;
-            }
-        }
 
-       
+
 
     </script>
 
@@ -33,20 +30,19 @@
         <h3>Abonnez-vous, c'est gratuit! </h3>
 
 
-        <form action="enregistrement.aspx"  method="post">
+        <form action="enregistrement.aspx" method="post">
             <label for="prenom">Prénom:</label>
-            <input id="prenom" required="required" class="form-control" type="text" name="prenom" /><br />
-                <label for="nom">Nom: </label>
-                <input id="nom" class="form-control" type="text" name="nom" /><br />
-                <label for="courriel">Courriel: </label>
-                <input id="courriel" class="form-control" type="email" name="courriel" /> <br />
-            <input name="naissance" class="form-control"  type="date" placeholder="Date de naissance" />
-                <input type="submit" 
-                       class="btn" 
-                       value="Envoyer" 
-                       id="btn"
-                />
-</form>
+            <input id="prenom" title="Entrez votre prénom" autofocus="autofocus" required="required" class="form-control" type="text" name="prenom" /><br />
+            <label for="nom">Nom: </label>
+            <input id="nom" class="form-control" type="text" name="nom" /><br />
+            <label for="courriel">Courriel: </label>
+            <input id="courriel" class="form-control" type="email" name="courriel" /> <br />
+            <input name="naissance" class="form-control" type="date" placeholder="Date de naissance" />
+            <input type="submit"
+                   class="btn"
+                   value="Envoyer"
+                   id="btn" />
+        </form>
     </div>
 
 
