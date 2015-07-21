@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Abonnement à l'InfoLettre</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <script>
+        function init() {
+            var btn = document.getElementById("btn");
+            btn.addEventListener("click", validate);
+        }
+
+        window.addEventListener("DOMContentLoaded",init)
+        
+        function validate(evt)
+        {
+            var nom = document.getElementById("nom");
+            if (nom.value.length < 2) {
+                alert("nom est trop court!");
+                evt.preventDefault();
+                return false;
+            }
+        }
+
+       
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Abonnement à l'infolettre</h1>
+        <h3>Abonnez-vous, c'est gratuit! </h3>
+
+
+        <form action="enregistrement.aspx"  method="post">
+            <label for="prenom">Prénom:</label>
+            <input id="prenom" required="required" class="form-control" type="text" name="prenom" /><br />
+                <label for="nom">Nom: </label>
+                <input id="nom" class="form-control" type="text" name="nom" /><br />
+                <label for="courriel">Courriel: </label>
+                <input id="courriel" class="form-control" type="email" name="courriel" /> <br />
+            <input name="naissance" class="form-control"  type="date" placeholder="Date de naissance" />
+                <input type="submit" 
+                       class="btn" 
+                       value="Envoyer" 
+                       id="btn"
+                />
+</form>
+    </div>
+
+
+</body>
+</html>

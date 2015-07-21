@@ -1,0 +1,6 @@
+c:\demo\StatMtl\StatMtl\bin\StatMtl.dll.config
+c:\demo\StatMtl\StatMtl\bin\StatMtl.dll
+c:\demo\StatMtl\StatMtl\bin\StatMtl.pdb
+c:\demo\StatMtl\StatMtl\obj\Debug\StatMtl.csprojResolveAssemblyReference.cache
+c:\demo\StatMtl\StatMtl\obj\Debug\StatMtl.dll
+c:\demo\StatMtl\StatMtl\obj\Debug\StatMtl.pdb
