@@ -4,3 +4,9 @@ c:\demo\StatMtl\StatMtl\bin\StatMtl.pdb
 c:\demo\StatMtl\StatMtl\obj\Debug\StatMtl.csprojResolveAssemblyReference.cache
 c:\demo\StatMtl\StatMtl\obj\Debug\StatMtl.dll
 c:\demo\StatMtl\StatMtl\obj\Debug\StatMtl.pdb
+C:\demo\WebStationnementMtl\StatMtl\bin\StatMtl.dll.config
+C:\demo\WebStationnementMtl\StatMtl\bin\StatMtl.dll
+C:\demo\WebStationnementMtl\StatMtl\bin\StatMtl.pdb
+C:\demo\WebStationnementMtl\StatMtl\obj\Debug\StatMtl.csprojResolveAssemblyReference.cache
+C:\demo\WebStationnementMtl\StatMtl\obj\Debug\StatMtl.dll
+C:\demo\WebStationnementMtl\StatMtl\obj\Debug\StatMtl.pdb

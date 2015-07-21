@@ -4,19 +4,39 @@
     <title>Abonnement à l'InfoLettre</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
 
-    <script>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
 
-        document.addEventListener("DOMContentLoaded", function () {
-            var btn = document.getElementById("btn");
-            btn.addEventListener("click", function (evt) {
-                var nom = document.getElementById("nom");
-                if (nom.value.length < 2) {
-                    alert("nom est trop court!");
-                    evt.preventDefault();
+    <script>
+        function isSignificant( text ){
+            var notWhitespaceTestRegex = /[^\s]+/;
+            return String(text).search(notWhitespaceTestRegex) != -1;
+        }
+
+
+        $(function () {
+            $("#btn").click(function () {
+                if ($("#nom").val().length < 2 || !isSignificant($("#nom").val())) {
+                    alert("Nom trop court!");
+                    $("#nom").parent().addClass("has-error");
                     return false;
+                } else {
+                    $("#nom").parent().removeClass("has-error");
                 }
             });
-        })
+        });
+
+
+        //document.addEventListener("DOMContentLoaded", function () {
+        //    var btn = document.getElementById("btn");
+        //    btn.addEventListener("click", function (evt) {
+        //        var nom = document.getElementById("nom");
+        //        if (nom.value.length < 2) {
+        //            alert("nom est trop court!");
+        //            evt.preventDefault();
+        //            return false;
+        //        }
+        //    });
+        //})
 
 
 
@@ -33,8 +53,10 @@
         <form action="enregistrement.aspx" method="post">
             <label for="prenom">Prénom:</label>
             <input id="prenom" title="Entrez votre prénom" autofocus="autofocus" required="required" class="form-control" type="text" name="prenom" /><br />
-            <label for="nom">Nom: </label>
-            <input id="nom" class="form-control" type="text" name="nom" /><br />
+            <div class="form-group">
+                <label class="control-label" for="nom">Nom: </label>
+                <input id="nom" class="form-control" type="text" name="nom" /><br />
+            </div>
             <label for="courriel">Courriel: </label>
             <input id="courriel" class="form-control" type="email" name="courriel" /> <br />
             <input name="naissance" class="form-control" type="date" placeholder="Date de naissance" />
