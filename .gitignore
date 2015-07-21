@@ -4,6 +4,7 @@ ehthumbs.db
 
 packages/
 bin/
+obj/
 
 # Folder config file
 Desktop.ini
